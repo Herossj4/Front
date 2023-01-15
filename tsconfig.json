@@ -25,6 +25,9 @@
     // richEditor
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    // permitir JavaScript
+    "allowJs": true,
+    "checkJs": false,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

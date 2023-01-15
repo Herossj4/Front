@@ -1,4 +1,3 @@
 export class Model{
-   constructor(){}
-   listTarjetas:any[] = []; 
+   listTarjetas:any[] = [];
 }

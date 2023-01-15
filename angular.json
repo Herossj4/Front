@@ -45,8 +45,6 @@
               "node_modules/devexpress-richedit/dist/dx.richedit.css"
             ],
             "scripts": [
-              "src/scripts.js",
-
               "node_modules/sweetalert2/dist/sweetalert2.min.js",
 
               "node_modules/air-datepicker/air-datepicker.js"

@@ -8,6 +8,8 @@ import { NotFoundComponent } from './Componentes/not-found/not-found.component';
 import { AirDatepickerComponent } from './Componentes/air-datepicker/air-datepicker.component';
 import { Sweetalert2Component } from './Componentes/sweetalert2/sweetalert2.component';
 import { HomeComponent } from './Componentes/home/home.component';
+import { TimeModalComponent } from './Componentes/time-modal/time-modal.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: '404', component: NotFoundComponent},
   { path: 'date-picker', component: AirDatepickerComponent},
   { path: 'sweetalert', component: Sweetalert2Component},
+  { path: 'time', component: TimeModalComponent},
   { path: '**', redirectTo:'404'}
 ];
 export const routing = RouterModule.forRoot(routes);
