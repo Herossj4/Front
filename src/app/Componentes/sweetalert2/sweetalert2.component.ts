@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Entitys } from 'src/app/Entitys';
 // Jquery
 declare var $:any;
 // SweetAlert 2 V11.4.8
@@ -12,6 +13,8 @@ declare var AirDatepicker:any;
 })
 export class Sweetalert2Component implements OnInit {
 
+  entity = new Entitys();
+
   constructor() { }
 
   ngOnInit() {
@@ -19,7 +22,8 @@ export class Sweetalert2Component implements OnInit {
       title: 'WOW!',
       text: 'Sweetalert 2 INSTALADO!!',
       icon: 'success',
-      confirmButtonText: 'Cool'
+      confirmButtonText: 'Cool',
+      footer: 'Front '+ this.entity.version
     });
   }
 

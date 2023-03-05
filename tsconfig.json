@@ -5,6 +5,11 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "compressimg": [
+        "dist/compressimg"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -22,9 +27,6 @@
       "es2020",
       "dom"
     ],
-    // richEditor
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
     // permitir JavaScript
     "allowJs": true,
     "checkJs": false,

@@ -1,0 +1,120 @@
+$fuente: forgotten_futurist;
+
+@font-face {
+font-family: forgotten_futurist;
+src: url('../../../../fonts/forgotten_futurist/forgotten\ futurist\ rg.ttf');
+}
+
+body{
+  padding:0;
+  margin:0;
+}
+.vid-container{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.bgvid.back {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+}
+.inner {
+  position: absolute;
+}
+.inner-container{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:calc(50vh - 200px);
+  left:calc(50vw - 200px);
+  overflow:hidden;
+}
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  color:#fff;
+  background:rgba(0,0,0,0.13);
+  padding:30px 0px;
+}
+.box h1{
+  text-align:center;
+  margin:30px 0;
+  font-size:30px;
+  font-family: $fuente;
+}
+.box input{
+  display:block;
+  width:300px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-family: $fuente;
+}
+.box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+}
+.box button{
+  background:#03246d;
+  border:0;
+  border-radius: 10px;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  font-family: $fuente;
+  width:300px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.box button:active{
+  background:#066c30;
+}
+.box p{
+  font-size:14px;
+  font-family: $fuente;
+  text-align:center;
+}
+.box p span{
+  cursor:pointer;
+  color:#666;
+}
+
+input:valid,
+textarea:valid {
+  border-color: green;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+.contenedor-login{
+  max-width:80%;
+  height:auto;
+  background-color:#EFEFEF;
+  margin: 5% auto;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+}
+
+.adaptar{
+  height: 75%;
+  width: 92%;
+  border-radius: 20px;
+  border-color: black;
+  box-shadow: 7px 5px 8px 6px black;
+}
+
+.adaptar2{
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}

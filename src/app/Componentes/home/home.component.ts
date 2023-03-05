@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   model = new Model();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.reloj();
@@ -26,12 +26,20 @@ export class HomeComponent implements OnInit {
     m = this.checkTime(m);
     s = this.checkTime(s);
 
+    if(h > 0 && h < 13){
+      this.model.format = "a.m.";
+    }else{
+      this.model.format = "p.m.";
+    }
+
     if(h > 12) {
       h = h - 12;
     }
+
     if(h == 0){
       h = 12;
     }
+
     this.model.reloj = h + ":" + m;
     let t = setTimeout(() => {
       this.reloj();
@@ -44,4 +52,10 @@ export class HomeComponent implements OnInit {
     }
     return i;
   }
+
+  changeBtnRadio(){
+    setTimeout(() => {
+     $('#play1').prop('checked',true);
+    }, 3000);
+   }
 }

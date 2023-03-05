@@ -1,0 +1,37 @@
+<div class="contenedor2">
+    <div class="box2">
+      <input type="file" #filetarget id="filetargetid" accept="image/*" (change)="changeMultimedia($any($event))" aria-label="Seleccionar imagen" hidden>
+  
+      <label for="filetargetid" class="btn">
+        <div class="text-1">Subir Archivo <i class="fas fa-upload"></i></div>
+      </label>
+  
+      <div class="result-console">
+        <div class="result-section">
+          <div class="text-2">Resultado <i class="fas fa-clipboard"></i></div>
+          <div class="item">
+            <textarea class="txtarea-result" disabled [(ngModel)]="model.MultimediaBase64"></textarea>
+          </div>
+        </div>
+  
+        <div class="convert-section">
+          <div class="text-2">Base64 A Imagen <i class="fas fa-image"></i></div>
+          <div class="item">
+            <textarea class="txtarea-result" [(ngModel)]="imagen"></textarea>
+          </div>
+  
+          <div class="convert-button">
+            <span class="btn" (click)="model.show = true;">Convertir <i class="fas fa-rotate"></i></span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="image-result" *ngIf="model.show == true && imagen != null">
+        <div class="text-2">Resultado <i class="fas fa-image"></i></div>
+        <div class="item">
+          <img [src]="imagen" alt="Error Resultado">
+        </div>
+      </div>
+  
+    </div>
+  </div>

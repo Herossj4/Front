@@ -1,34 +1,45 @@
-<div class="container" style="justify-content: center;">
-    <div class="tutorial" >
+<!-- <div class="tutorial">
+  <ul>
+    <i class="fa fa-file"></i>
+    <li routerLink="/front/home" routerLinkActive="active">Inicio</li>
+    <li>Modulos<i class="fa fa-angle-down"></i>
       <ul>
-
-        <i class="fa fa-bars"></i>
-        <li routerLink="/home" routerLinkActive="active">Inicio</li>
-        <li>Modulos<i class="fa fa-angle-down"></i>
-          <ul>
-            <li routerLink="/font" routerLinkActive="active">FontAwesome<span>V6.2.1</span></li>
-            <li routerLink="/rich-edit" routerLinkActive="active">Rich Editor<span>V22.2.3</span></li>
-            <li routerLink="/date-picker" routerLinkActive="active">AirDatePicker<span>V3.3.3</span></li>
-            <li routerLink="/sweetalert" routerLinkActive="active">SweetAlert2<span>V11.4.8</span></li>
-            <li routerLink="/time" routerLinkActive="active">Time Picker<span>V1.0</span></li>
-            <li>Proximamente<span>Soon</span></li>
-          </ul>
-        </li>
-        <li routerLink="/404" routerLinkActive="active">Error 404</li>
-        <li>Link<i class="fa fa-angle-down"></i>
-          <ul>
-            <li>Graphic Design</li>
-            <li>Website Design</li>
-            <li>Python Programming</li>
-            <li>PHP Programming</li>
-          </ul>
-        </li>
-        <li>Contact</li>
+        <li routerLink="/front/font" routerLinkActive="active">FontAwesome<span>V6.2.1</span></li>
+        <li routerLink="/front/date-picker" routerLinkActive="active">AirDatePicker<span>V3.3.3</span></li>
+        <li routerLink="/front/sweetalert" routerLinkActive="active">SweetAlert2<span>V11.4.8</span></li>
+        <li routerLink="/front/time" routerLinkActive="active">Time Picker<span>V1.0</span></li>
+        <li routerLink="/front/base64" routerLinkActive="active">Base64<span>V1.0</span></li>
       </ul>
+    </li>
+    <li routerLink="/404" routerLinkActive="active">Error 404</li>
+    <li>Link<i class="fa fa-angle-down"></i>
+      <ul>
+        <li>Graphic Design</li>
+        <li>Website Design</li>
+        <li>Python Programming</li>
+        <li>PHP Programming</li>
+      </ul>
+    </li>
+    <li>Contact</li>
+    <li (click)="logout()">Cerrar Sesion
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </li>
+  </ul>
+</div>
 
-      <!-- <div class="information">
-        <p>A simple, clean looking dropdown menu effect achieved using pure CSS. Simple functionality, method can be extended to create a secondary dropdown block with few edits.</p>
-      </div> -->
-    </div>
-  </div>
-<router-outlet></router-outlet>
+ -->
+
+ <nav>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Acerca de</a></li>
+    <li><a href="#">Servicios</a>
+      <ul>
+        <li><a href="#">Diseño Web</a></li>
+        <li><a href="#">Desarrollo Web</a></li>
+        <li><a href="#">Optimización SEO</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>

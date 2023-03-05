@@ -1,3 +1,8 @@
 export class Model{
-   listTarjetas:any[] = [];
+  varLogin = {
+    user:"",
+    pass:null
+  };
+
+  showLoading:boolean = false;
 }

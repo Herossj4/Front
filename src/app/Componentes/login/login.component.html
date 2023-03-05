@@ -1,2 +1,27 @@
-<h1>FUNCIONANDO </h1>
-<i class="fa fa-angular"></i>
+<div id="log" *ngIf="model.showLoading == false">
+  <div class="vid-container">
+    <div class="inner-container">
+      <div class="box">
+        <h1>Login</h1>
+        <form ngNativeValidate (ngSubmit)="logeo()">
+          <input type="text" name="user" placeholder="Usuario" autocomplete="off" [(ngModel)]="model.varLogin.user" required pattern="[A-Za-z.]{3,15}" title="Debe ser texto.">
+          <input type="password" name="pass" placeholder="Contraseña" maxlength="4" autocomplete="off" [(ngModel)]="model.varLogin.pass" required pattern="[0-9]{4,4}" title="Deben ser 4 numeros">
+          <button type="submit">Ingresar</button>
+        </form>
+        <p>No es un miembro? <span>Registrate</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="log" *ngIf="model.showLoading == true">
+  <div class="vid-container">
+    <div class="inner-container">
+      <div class="box adaptar">
+        <div class="subtitulo3">Iniciando Sesion</div>
+        <div class="loader adaptar2"></div>
+        <div class="subtitulo2">Porfavor Espere...</div>
+      </div>
+    </div>
+  </div>
+</div>

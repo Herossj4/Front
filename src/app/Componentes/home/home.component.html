@@ -1,18 +1,56 @@
-<div class="titulo" id="reloj" style="font-size:85px;"> {{model.reloj}}</div>
-<div class="slider-frame">
-    <ul>
-        <li><img src="../../../assets/Img/modulos/font-awesome.png" alt=""></li>
-        <li><img src="../../../assets/Img/modulos/richeditor.webp" alt=""></li>
-        <li><img src="../../../assets/Img/modulos/air-datepicker.png" alt=""></li>
-        <li><img src="../../../assets/Img/modulos/sweetalert2.jpg" alt=""></li>
-    </ul>
-    &bullet;
-    <ul class="slider-controler">
-      <li><a href="#slide1">&bullet;</a></li>
-      <li><a href="#slide2">&bullet;</a></li>
-      <li><a href="#slide3">&bullet;</a></li>
-      <li><a href="#slide4">&bullet;</a></li>
-      <li><a href="#slide5"></a></li>
-    </ul>
+<div class="titulo adaptar" id="reloj">
+  {{model.reloj}}
+  <div class="subtitulo">
+    {{model.format}}
+  </div>
 </div>
 
+<div class="centrar">
+    <div id="homepage-slider" class="st-slider">
+
+        <input hidden (change)="changeBtnRadio()" type="radio" class="cs_anchor radio" name="slider" id="slide1" />
+        <input hidden (change)="changeBtnRadio()" type="radio" class="cs_anchor radio" name="slider" id="slide2" />
+        <input hidden (change)="changeBtnRadio()" type="radio" class="cs_anchor radio" name="slider" id="slide3" />
+        <input hidden type="radio" class="cs_anchor radio autoplay" name="slider" id="play1" checked="" />
+
+        <div class="images">
+            <div class="images-inner">
+                <div class="image-slide">
+                    <div class="image bg-yellow">
+                        <img id="slider-1" src="https://www.eltiempo.com/files/image_640_428/uploads/2020/12/09/5fd1466c9bad3.jpeg" alt="">
+                        image slide 1
+                    </div>
+                </div>
+                <div class="image-slide">
+                    <div class="image bg-blue">
+                        <img id="slider-2" src="https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?cs=srgb&dl=pexels-pixabay-220201.jpg&fm=jpg" alt="">
+                        imager slide 2
+                    </div>
+                </div>
+                <div class="image-slide">
+                    <div class="image bg-red">
+                        <img id="slider-3" src="https://media.ambito.com/p/b7f41c903b4bd8792496f8cb380e1772/adjuntos/239/imagenes/037/897/0037897584/espacio-galaxia.jpg" alt="">
+                        image slide 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="labels">
+            <label for="slide1" class="label">text slide 1</label>
+            <label for="slide2" class="label">text slide 2</label>
+            <label for="slide3" class="label">text slide 3</label>
+
+            <div class="fake-radio pagination">
+                <label for="slide1" class="pagination-item">
+                    <img src="https://www.eltiempo.com/files/image_640_428/uploads/2020/12/09/5fd1466c9bad3.jpeg">
+                </label>
+                <label for="slide2" class="pagination-item">
+                    <img src="https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?cs=srgb&dl=pexels-pixabay-220201.jpg&fm=jpg">
+                </label>
+                <label for="slide3" class="pagination-item">
+                    <img src="https://media.ambito.com/p/b7f41c903b4bd8792496f8cb380e1772/adjuntos/239/imagenes/037/897/0037897584/espacio-galaxia.jpg">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

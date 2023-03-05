@@ -8,13 +8,12 @@ $blue: #4738f0;
 $fuente: forgotten_futurist;
 
 @font-face {
-  font-family: PT Sans Narrow;
-  src: url('../fonts/PTSansNarrow/PTSansNarrow-Regular.ttf');
-}
-
-@font-face {
 font-family: forgotten_futurist;
 src: url('../fonts/forgotten_futurist/forgotten\ futurist\ rg.ttf');
+}
+
+html,body{
+  overflow: hidden;
 }
 
 body{
@@ -27,19 +26,39 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-*{
-  font-family: $fuente;
+  object-fit: cover;
+  object-position: center;
 }
 
 .titulo{
-    font-family: $fuente;
-    text-align: center;
+  font-family: $fuente;
+  text-align: center;
+}
+
+.subtitulo{
+  font-family: $fuente;
+  font-size: 56px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.subtitulo2{
+  font-family: $fuente;
+  font-size: 18px;
+  top: 85%;
+  position: absolute;
+  left: 35%;
+}
+
+.subtitulo3 {
+  font-family: forgotten_futurist;
+  font-size: 28px;
+  text-align: center;
+  /* font-weight: bold; */
 }
 
 .cursor{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .contenedor {
@@ -51,119 +70,16 @@ body{
   text-align: center;
 }
 
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
-// page container
-.container {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-// tutorial start
-.tutorial {
-  width: 80%;
-  margin: 5% auto 0 auto;
-  box-shadow: 0 4px 12px rgba(black, 0.1);
-  background-color: $subtle-white;
-  max-width: 800px;
-
-.slider {
-  width: 100%;
-  height: 300px;
-  background-color: $blue;
-}
-
-.information {
-  width: 100%;
-  padding: 20px 50px;
-  margin-bottom: 30px;
-  font-family: $fuente;
-
-  h1 {
-    color: $masked-grey;
-    font-size: 1.5rem;
-    padding: 0px 10px;
-    border-left: 3px solid $blue;
-  }
-
-  h3 {
-    color: darken($subtle-grey, 7%);
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 0px 10px;
-    border-left: 3px solid $blue;
-  }
-
-  p {
-    padding: 10px 0px;
-  }
-}
-
-  ul {
-    font-size: 0;
-    list-style-type: none;
-
-    // initial li
-    li {
-      font-family: $fuente;
-      font-size: 1rem;
-      font-weight: 400;
-      color: $masked-grey;
-
-      display: inline-block;
-      padding: 17px;
-      position: relative;
-
-       // secondary ul
-        ul {
-          display: none;
-        }
-
-      // initial li:hover
-      &:hover {
-        cursor: pointer;
-        background-color: $subtle-grey;
-
-        // secondary ul visibility change
-        ul {
-          display: block;
-          margin-top: 15px;
-
-          width: 200px;
-          left: -50px;
-
-          position: absolute;
-
-          // secondary li
-          li {
-            display: block;
-            background-color: darken($subtle-white, 7%);
-            span {
-              float: right;
-              color: $subtle-white;
-              background-color: $blue;
-              padding: 2px 5px;
-              text-align: center;
-              font-size: .8rem;
-              border-radius: 3px;
-            }
-
-            &:hover {
-              background-color: darken($subtle-white, 10%);
-              span {
-                background-color: darken($blue, 5%);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
