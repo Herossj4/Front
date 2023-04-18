@@ -1,11 +1,11 @@
-<div id="log" *ngIf="model.showLoading == false">
+<div id="log" *ngIf="model.showLoading == false" oncontextmenu="false">
   <div class="vid-container">
     <div class="inner-container">
       <div class="box">
         <h1>Login</h1>
         <form ngNativeValidate (ngSubmit)="logeo()">
-          <input type="text" name="user" placeholder="Usuario" autocomplete="off" [(ngModel)]="model.varLogin.user" required pattern="[A-Za-z.]{3,15}" title="Debe ser texto.">
-          <input type="password" name="pass" placeholder="Contraseña" maxlength="4" autocomplete="off" [(ngModel)]="model.varLogin.pass" required pattern="[0-9]{4,4}" title="Deben ser 4 numeros">
+          <input type="text" name="user" placeholder="Usuario" autocomplete="off" [(ngModel)]="model.varLogin.user" required pattern="[A-Za-z.]{3,15}" title="Debe ser texto." (keyup.enter)="logeo()">
+          <input type="password" name="pass" placeholder="Contraseña" maxlength="4" autocomplete="off" [(ngModel)]="model.varLogin.pass" required pattern="[0-9]{4,4}" title="Deben ser 4 numeros" (keyup.enter)="logeo()">
           <button type="submit">Ingresar</button>
         </form>
         <p>No es un miembro? <span>Registrate</span></p>
